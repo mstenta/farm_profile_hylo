@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - farm_profile.profile_type.hylo
+    - field.storage.profile.operation_noun
+  module:
+    - options
+  enforced:
+    module:
+      - farm_profile_hylo
+id: profile.hylo.operation_noun
+field_name: operation_noun
+entity_type: profile
+bundle: hylo
+label: 'Operation Noun'
+description: 'What common noun do you use to describe your operation? Do you call it a ranch? A farm? Etc'
+required: false
+translatable: false
+default_value:
+  -
+    value: farm
+default_value_callback: ''
+settings: {  }
+field_type: list_string

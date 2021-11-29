@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - farm_profile.profile_type.hylo
+    - field.storage.profile.creator
+  enforced:
+    module:
+      - farm_profile_hylo
+id: profile.hylo.creator
+field_name: creator
+entity_type: profile
+bundle: hylo
+label: 'Creator Email'
+description: 'Email for the person filling out the survey'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

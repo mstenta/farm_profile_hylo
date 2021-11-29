@@ -12,5 +12,8 @@
             "name": "Tom Watson",
             "email": "thomasgabriel.watson@gmail.com"
         }
-    ]
+    ],
+    "require": {
+        "drupal/json_field": "^1.0@RC"
+    }
 }

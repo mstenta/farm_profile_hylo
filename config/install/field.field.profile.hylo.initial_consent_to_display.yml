@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - farm_profile.profile_type.hylo
+    - field.storage.profile.initial_consent_to_display
+  enforced:
+    module:
+      - farm_profile_hylo
+id: profile.hylo.initial_consent_to_display
+field_name: initial_consent_to_display
+entity_type: profile
+bundle: hylo
+label: 'Initial Consent To Display'
+description: "Does the person providing the data on this operation have both\r\n1) the permission to do that on behalf of the operation, and \r\n2) do they provide the initial consent to Hylo.com to store the data, and display parts of the data."
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

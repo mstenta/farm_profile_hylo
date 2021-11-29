@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - farm_profile
+    - json_field
+  enforced:
+    module:
+      - farm_profile_hylo
+id: profile.farm_group_moderators
+field_name: farm_group_moderators
+entity_type: profile
+type: json_native_binary
+settings: {  }
+module: json_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

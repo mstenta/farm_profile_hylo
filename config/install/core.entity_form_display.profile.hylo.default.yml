@@ -1,0 +1,114 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - farm_profile.profile_type.hylo
+    - field.field.profile.hylo.creator
+    - field.field.profile.hylo.creator_name
+    - field.field.profile.hylo.farm_group_moderators
+    - field.field.profile.hylo.initial_consent_to_display
+    - field.field.profile.hylo.operation_noun
+    - field.field.profile.hylo.operator_noun
+    - field.field.profile.hylo.schema_version
+    - field.field.profile.hylo.source_channel
+  module:
+    - json_field
+  enforced:
+    module:
+      - farm_profile_hylo
+id: profile.hylo.default
+targetEntityType: profile
+bundle: hylo
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  creator:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  creator_name:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  farm_group_moderators:
+    weight: 29
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: json_textarea
+    region: content
+  initial_consent_to_display:
+    weight: 26
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  operation_noun:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  operator_noun:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  schema_version:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  source_channel:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: false
+    weight: 0
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    weight: 15
+    region: content
+    third_party_settings: {  }
+hidden: {  }

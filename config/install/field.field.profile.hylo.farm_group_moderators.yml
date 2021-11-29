@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - farm_profile.profile_type.hylo
+    - field.storage.profile.farm_group_moderators
+  module:
+    - json_field
+  enforced:
+    module:
+      - farm_profile_hylo
+id: profile.hylo.farm_group_moderators
+field_name: farm_group_moderators
+entity_type: profile
+bundle: hylo
+label: 'Farm Group Moderators'
+description: "Who from the operation wants to have an account on Hylo, so that they can connect with other operations and folks in the regenerative food/agriculture space?\r\n\r\nThis is a list of individuals, with name and email. They will be invited to join the Hylo platform and will be connected to the group representing their organization, with moderator level privileges."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: json_native_binary

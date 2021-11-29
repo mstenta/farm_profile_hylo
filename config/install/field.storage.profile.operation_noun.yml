@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - farm_profile
+    - options
+  enforced:
+    module:
+      - farm_profile_hylo
+id: profile.operation_noun
+field_name: operation_noun
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: farm
+      label: Farm
+    -
+      value: ranch
+      label: Ranch
+    -
+      value: collective
+      label: Collective
+    -
+      value: cooperative
+      label: Cooperative
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

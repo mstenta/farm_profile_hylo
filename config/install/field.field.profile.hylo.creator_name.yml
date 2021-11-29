@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - farm_profile.profile_type.hylo
+    - field.storage.profile.creator_name
+  enforced:
+    module:
+      - farm_profile_hylo
+id: profile.hylo.creator_name
+field_name: creator_name
+entity_type: profile
+bundle: hylo
+label: 'Creator Name'
+description: 'Name of the person filling out the survey'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

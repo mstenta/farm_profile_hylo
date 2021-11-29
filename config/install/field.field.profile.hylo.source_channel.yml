@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - farm_profile.profile_type.hylo
+    - field.storage.profile.source_channel
+  enforced:
+    module:
+      - farm_profile_hylo
+id: profile.hylo.source_channel
+field_name: source_channel
+entity_type: profile
+bundle: hylo
+label: 'How did you find out about this?'
+description: 'Via what organization or source did you find out about this?'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
