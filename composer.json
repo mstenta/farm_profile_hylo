@@ -13,7 +13,19 @@
             "email": "thomasgabriel.watson@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mstenta/farm_profile.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/mstenta/farm_profile_common.git"
+        }
+    ],
     "require": {
-        "drupal/json_field": "^1.0@RC"
+        "drupal/json_field": "^1.0@RC",
+        "mstenta/farm_profile": "1.x-dev",
+        "mstenta/farm_profile_common": "1.0.0"
     }
 }
