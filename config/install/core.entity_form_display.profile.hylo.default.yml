@@ -3,16 +3,23 @@ status: true
 dependencies:
   config:
     - farm_profile.profile_type.hylo
+    - field.field.profile.hylo.at_a_glance
     - field.field.profile.hylo.creator
     - field.field.profile.hylo.creator_name
     - field.field.profile.hylo.farm_group_moderators
     - field.field.profile.hylo.initial_consent_to_display
+    - field.field.profile.hylo.location_privacy
+    - field.field.profile.hylo.mission
+    - field.field.profile.hylo.open_to_public
+    - field.field.profile.hylo.opening_hours
     - field.field.profile.hylo.operation_noun
     - field.field.profile.hylo.operator_noun
+    - field.field.profile.hylo.public_offerings
     - field.field.profile.hylo.schema_version
     - field.field.profile.hylo.source_channel
   module:
     - json_field
+    - text
   enforced:
     module:
       - farm_profile_hylo
@@ -21,6 +28,14 @@ targetEntityType: profile
 bundle: hylo
 mode: default
 content:
+  at_a_glance:
+    type: string_textfield
+    weight: 34
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 20
@@ -28,70 +43,107 @@ content:
     settings: {  }
     third_party_settings: {  }
   creator:
-    weight: 30
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
     type: email_default
+    weight: 30
     region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
   creator_name:
+    type: string_textfield
     weight: 31
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   farm_group_moderators:
+    type: json_textarea
     weight: 29
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: json_textarea
-    region: content
   initial_consent_to_display:
+    type: boolean_checkbox
     weight: 26
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
+  location_privacy:
+    type: options_select
+    weight: 37
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  mission:
+    type: text_textfield
+    weight: 39
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  open_to_public:
     type: boolean_checkbox
+    weight: 35
     region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  opening_hours:
+    type: text_textfield
+    weight: 38
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   operation_noun:
+    type: options_select
     weight: 27
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   operator_noun:
+    type: options_select
     weight: 28
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+  public_offerings:
+    type: string_textfield
+    weight: 36
     region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   schema_version:
+    type: string_textfield
     weight: 33
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   source_channel:
+    type: string_textfield
     weight: 32
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   status:
     type: boolean_checkbox
-    settings:
-      display_label: false
     weight: 0
     region: content
+    settings:
+      display_label: false
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -103,12 +155,12 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-      match_limit: 10
     weight: 15
     region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
 hidden: {  }

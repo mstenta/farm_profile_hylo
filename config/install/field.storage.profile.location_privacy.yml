@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - farm_profile
+    - options
+  enforced:
+    module:
+      - farm_profile_hylo
+id: profile.location_privacy
+field_name: location_privacy
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: precise
+      label: 'Show my address and location on a map'
+    -
+      value: near
+      label: 'Share my region/town and show the operation''s general location on maps'
+    -
+      value: region
+      label: 'Just share the region/town the operation is in'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

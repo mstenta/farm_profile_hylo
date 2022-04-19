@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - farm_profile.profile_type.hylo
+    - field.storage.profile.location_privacy
+  module:
+    - options
+  enforced:
+    module:
+      - farm_profile_hylo
+id: profile.hylo.location_privacy
+field_name: location_privacy
+entity_type: profile
+bundle: hylo
+label: 'Location privacy'
+description: 'How precisely do you want to show your operation''s location?'
+required: false
+translatable: false
+default_value:
+  -
+    value: precise
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - farm_profile.profile_type.hylo
+    - field.storage.profile.at_a_glance
+  enforced:
+    module:
+      - farm_profile_hylo
+id: profile.hylo.at_a_glance
+field_name: at_a_glance
+entity_type: profile
+bundle: hylo
+label: 'At A Glance'
+description: 'Pick up to six phrases to describe your farm at a glance'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

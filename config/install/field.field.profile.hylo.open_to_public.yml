@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - farm_profile.profile_type.hylo
+    - field.storage.profile.open_to_public
+  enforced:
+    module:
+      - farm_profile_hylo
+id: profile.hylo.open_to_public
+field_name: open_to_public
+entity_type: profile
+bundle: hylo
+label: 'Open to public'
+description: 'Is this farm open to visits from the public?'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

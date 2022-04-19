@@ -3,17 +3,24 @@ status: true
 dependencies:
   config:
     - farm_profile.profile_type.hylo
+    - field.field.profile.hylo.at_a_glance
     - field.field.profile.hylo.creator
     - field.field.profile.hylo.creator_name
     - field.field.profile.hylo.farm_group_moderators
     - field.field.profile.hylo.initial_consent_to_display
+    - field.field.profile.hylo.location_privacy
+    - field.field.profile.hylo.mission
+    - field.field.profile.hylo.open_to_public
+    - field.field.profile.hylo.opening_hours
     - field.field.profile.hylo.operation_noun
     - field.field.profile.hylo.operator_noun
+    - field.field.profile.hylo.public_offerings
     - field.field.profile.hylo.schema_version
     - field.field.profile.hylo.source_channel
   module:
     - json_field
     - options
+    - text
     - user
   enforced:
     module:
@@ -23,101 +30,148 @@ targetEntityType: profile
 bundle: hylo
 mode: default
 content:
-  created:
+  at_a_glance:
+    type: string
     label: above
-    type: timestamp
-    weight: 20
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 29
     region: content
+  created:
+    type: timestamp
+    label: above
     settings:
       date_format: medium
       custom_date_format: ''
       timezone: ''
     third_party_settings: {  }
+    weight: 20
+    region: content
   creator:
-    weight: 25
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 25
     region: content
   creator_name:
-    weight: 26
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 26
     region: content
   farm_group_moderators:
-    weight: 24
+    type: json
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: json
+    weight: 24
     region: content
   initial_consent_to_display:
-    weight: 21
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
+    weight: 21
+    region: content
+  location_privacy:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  mission:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  open_to_public:
     type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  opening_hours:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 33
     region: content
   operation_noun:
-    weight: 22
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 22
     region: content
   operator_noun:
-    weight: 23
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 23
+    region: content
+  public_offerings:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 31
     region: content
   schema_version:
-    weight: 28
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 28
     region: content
   source_channel:
-    weight: 27
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 27
     region: content
   status:
     type: boolean
     label: above
-    weight: 0
     settings:
       format: enabled-disabled
       format_custom_false: ''
       format_custom_true: ''
-    region: content
     third_party_settings: {  }
-  title:
-    label: hidden
-    type: string
-    weight: -5
+    weight: 0
     region: content
+  title:
+    type: string
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  uid:
-    label: above
-    type: author
-    weight: 15
+    weight: -5
     region: content
+  uid:
+    type: author
+    label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 15
+    region: content
 hidden: {  }

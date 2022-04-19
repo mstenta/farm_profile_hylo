@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - farm_profile.profile_type.hylo
+    - field.storage.profile.mission
+  module:
+    - text
+  enforced:
+    module:
+      - farm_profile_hylo
+id: profile.hylo.mission
+field_name: mission
+entity_type: profile
+bundle: hylo
+label: Purpose
+description: 'A purpose statement for your operation, if you have one.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

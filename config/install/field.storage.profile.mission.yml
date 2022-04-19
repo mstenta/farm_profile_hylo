@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - farm_profile
+    - text
+  enforced:
+    module:
+      - farm_profile_hylo
+id: profile.mission
+field_name: mission
+entity_type: profile
+type: text
+settings:
+  max_length: 400
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

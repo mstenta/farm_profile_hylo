@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - farm_profile.profile_type.hylo
+    - field.storage.profile.opening_hours
+  module:
+    - text
+  enforced:
+    module:
+      - farm_profile_hylo
+id: profile.hylo.opening_hours
+field_name: opening_hours
+entity_type: profile
+bundle: hylo
+label: 'Opening hours'
+description: 'Describe your opening hours'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

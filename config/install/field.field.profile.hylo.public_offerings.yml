@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - farm_profile.profile_type.hylo
+    - field.storage.profile.public_offerings
+  enforced:
+    module:
+      - farm_profile_hylo
+id: profile.hylo.public_offerings
+field_name: public_offerings
+entity_type: profile
+bundle: hylo
+label: 'Public offerings'
+description: "Public offerings that folks can partake in:\r\n\r\nFor example: farmstand, shop, u-pick crops, workshops, events, tours, etc"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
